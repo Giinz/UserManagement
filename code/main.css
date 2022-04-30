@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 2rem 0;
+    background-color: #3273dc;
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+.listUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userTable{
+    width: 800px;
+    border-collapse: collapse;
+}
+table,th,td{
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+}
+.userTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+/* .userTable tr:hover {
+    background-color: #ddd;
+} */
+.userTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+.userTable th:first-child{
+    width: 50px;
+    text-align: center;
+
+}
+tr td:first-child{
+    text-align: center;
+}
+.userTable th:nth-child(5){
+    width: 80px;
+}
+.CreateModal, .EditModal{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+.CreateForm, .EditForm{
+    width: 600px;
+    padding: 2rem;
+    background-color: #fefefe;
+    margin: auto 0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #888;
+}
+.CreateForm h1,.EditForm h1{
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #888;
+    font-weight: 500;
+}
+.userInformations-item{
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+}
+.userInformations-item input[type="text"]{
+    box-shadow: inset 0 0.0625em 0.125em rgba(10,10,10,0.05);
+    border: 1px solid transparent;
+    border-color: #dbdbdb;
+    border-radius: 4px;
+    background-color: #fff;
+    height: 2rem;
+    max-width: 100%;
+    width: 100%;
+    padding: 7px 11px;
+}
+.userInformations-item input[type="text"]:hover{
+    border-color: #b5b5b5;
+}
+.userInformations-item input[type="text"]:focus{
+    outline: none;
+    border-color: #3273dc;
+    box-shadow: 0 0 0 0.125em rgba(50,115,220,0.25);
+}
+.inputImg{
+    cursor: pointer;
+    display: none;
+}
+label>img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.userInformations-item h3{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.options{
+    padding:1rem 0;
+    border-top: 1px solid #888;
+    margin-top: 1rem;
+}
+.btn{
+    padding: 10px;
+    font-size: 14px;
+    width: max-content;
+    border-radius: 4px;
+    border: none;
+    background-color: #45d47c;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+.Cancel{
+    background-color: #ca4820;
+}
+.delete{
+    background-color: #ca2020;
+}

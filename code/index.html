@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">
+            <h1>User management</h1>
+            <div class="submitContainer">
+                <button class="btn CreateBtn">Create</button>
+            </div>
+        </div>
+        <div class="listUser">
+            <table class="userTable">
+                <tr>
+                    <th>Number</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Avatar </th>
+                    <th>Options</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="CreateModal">
+        <div class="CreateForm">
+            <h1>Contact Form</h1>
+            <div class="formContainer">
+                <div class="userInformations">
+                    <div class="userInformations-item">
+                        <h3>First Name</h3>
+                        <input type="text" class="firstNameForm">
+                    </div>
+                    <div class="userInformations-item">
+                        <h3>Last Name</h3>
+                        <input type="text" class="lastNameForm">
+                    </div>
+                    <div class="userInformations-item">
+                        <h3>Email</h3>
+                        <input type="text" class="emailForm">
+                    </div>
+                    <div class="userInformations-item">
+                        <h3>Avatar</h3>
+                        <label>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png">
+                            <input type="file" name="myfile"accept="image/*" class="inputImg avatar">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <button class="btn Create">Create</button>
+                <button class="btn Cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="EditModal">
+        <div class="EditForm">
+            <h1>Edit Profile</h1>
+            <div class="formContainer">
+                <div class="userInformations">
+                    <div class="userInformations-item">
+                        <h3>First Name</h3>
+                        <input type="text" class="editFirstNameForm">
+                    </div>
+                    <div class="userInformations-item">
+                        <h3>Last Name</h3>
+                        <input type="text" class="editLastNameForm">
+                    </div>
+                    <div class="userInformations-item">
+                        <h3>Email</h3>
+                        <input type="text" class="editEmailForm">
+                    </div>
+                    <div class="userInformations-item">
+                        <h3>Avatar</h3>
+                        <input type="file" class="inputImg editAvatar">
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <button class="btn Edit">Edit</button>
+                <button class="btn Cancel">Cancel</button>
+            </div>
+        </div>
+    </div> -->
+    <script src="apps.js"></script>
+</body>
+</html>
