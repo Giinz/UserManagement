@@ -40,9 +40,6 @@ table,th,td{
 .userTable tr:nth-child(even){
     background-color: #f2f2f2;
 }
-/* .userTable tr:hover {
-    background-color: #ddd;
-} */
 .userTable th {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -50,17 +47,6 @@ table,th,td{
     background-color: #04AA6D;
     color: white;
   }
-.userTable th:first-child{
-    width: 50px;
-    text-align: center;
-
-}
-tr td:first-child{
-    text-align: center;
-}
-.userTable th:nth-child(5){
-    width: 80px;
-}
 .CreateModal, .EditModal{
     position: fixed;
     top:0;
@@ -116,11 +102,7 @@ tr td:first-child{
     cursor: pointer;
     display: none;
 }
-label>img{
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
+
 .userInformations-item h3{
     font-size: 1rem;
     margin-bottom: 0.5rem;
@@ -149,4 +131,16 @@ label>img{
 }
 .delete{
     background-color: #ca2020;
+}
+.previewAvatar{
+    background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png");
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+}
+img{
+    width: 150px;
+    height: 150px;
 }

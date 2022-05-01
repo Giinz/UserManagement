@@ -25,14 +25,15 @@ function renderUsers(json){
     const htmls = json.map(item =>{
         return `
         <tr class="user-${item.id}">
-            <td>${item.id}</td>
+           
             <td class="firstName-${item.id}">${item.first_name}</td>
             <td class="lastName-${item.id}">${item.last_name}</td>
             <td class="email-${item.id}">${item.email}</td>
             <td><img src="${item.avatar}" class="avatar-${item.id}"></td>
             <td><button onclick="deleteUser(${item.id})" class="btn delete">Delete</button>
             <br><br>
-            <button class="btn  Edit" onclick="handleEditUserData(${item.id})">Edit</button> </td>
+            <button class="btn  Edit" onclick="handleEditUserData(${item.id})">Edit</button> 
+            </td>
         </tr>`
     })
     listUser.innerHTML += htmls.join(''); //why join()?
@@ -53,10 +54,10 @@ function handleCreateForm(){
                 first_name: firstNameData.value,
                 last_name: lastNameData.value,
                 email: emailData.value,
-                avatar: avatarData.value
+                avatar: uploadAvatar
             }
         ;
-        const fillForm = firstNameData.value == ''||lastNameData.value == ''||emailData.value==''||avatarData.value==''; 
+        const fillForm = firstNameData.value == ''||lastNameData.value == ''||emailData.value==''; 
         if(fillForm){
             alert('Error')
         }else{
@@ -120,7 +121,7 @@ function handleEditUserData(id){
                 first_name: firstNameData.value,
                 last_name: lastNameData.value,
                 email: emailData.value,
-                avatar: avatarData.value
+                avatar: uploadAvatar
             }
             editUserData(id,formEditData,renderUsers)
         }
@@ -138,3 +139,12 @@ function editUserData(id,data,callback){
         .then(respone=>respone.json())
         .then(callback)
 }
+let uploadAvatar = '';
+avatarData.addEventListener('change',function(){
+    const reader = new FileReader();
+    reader.addEventListener('load',function(){
+        uploadAvatar = reader.result;
+        document.querySelector('.previewAvatar').style.backgroundImage=`url(${uploadAvatar})`;
+    })
+    reader.readAsDataURL(this.files[0]); 
+})
